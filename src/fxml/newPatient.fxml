@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NewPatientController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="640.0" opacity="0.4">
+               <image>
+                  <Image url="@../resources/home-background.jpeg" />
+               </image>
+            </ImageView>
+            <VBox fx:id="newPatientVBox" layoutX="14.0" layoutY="6.0" prefHeight="373.0" prefWidth="279.0">
+               <children>
+                  <Label fx:id="nameLbl" prefHeight="17.0" prefWidth="131.0" text="Full Name:" />
+                  <TextField fx:id="nameField" prefHeight="26.0" prefWidth="443.0" promptText="First, Last" />
+                  <Label fx:id="ageLbl" text="Age:" />
+                  <TextField fx:id="ageField" prefHeight="26.0" prefWidth="261.0" />
+                  <Label fx:id="regionLbl" prefHeight="17.0" prefWidth="131.0" text="Address:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="regionField" prefHeight="26.0" prefWidth="261.0" promptText="123 Main St, City, State" />
+                  <Label id="emailLbl" text="Email Address:" />
+                  <TextField id="emailField" fx:id="emailField" prefHeight="26.0" prefWidth="261.0" promptText="yourname@domain.com" />
+                  <Button fx:id="add" mnemonicParsing="false" onAction="#addPatientAddButton" text="Add">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </VBox>
+            <Label layoutX="300.0" layoutY="43.0" prefHeight="17.0" prefWidth="223.0" text="Do you have any underlying health conditions? ">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="healthConditionsYes" layoutX="523.0" layoutY="43.0" mnemonicParsing="false" text="Yes" />
+            <CheckBox fx:id="healthConditionsNo" layoutX="587.0" layoutY="43.0" mnemonicParsing="false" text="No" />
+            <Label layoutX="300.0" layoutY="86.0" prefHeight="17.0" prefWidth="202.0" text="Have you traveled in the past 14 days?">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="traveledYes" layoutX="523.0" layoutY="86.0" mnemonicParsing="false" text="Yes" />
+            <CheckBox fx:id="traveledNo" layoutX="587.0" layoutY="86.0" mnemonicParsing="false" text="No" />
+            <Label layoutX="300.0" layoutY="131.0" prefHeight="17.0" prefWidth="202.0" text="Have you already been vaccinated?">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="alreadyVaccinatedYes" layoutX="523.0" layoutY="131.0" mnemonicParsing="false" text="Yes" />
+            <CheckBox fx:id="alreadyVaccinatedNo" layoutX="587.0" layoutY="131.0" mnemonicParsing="false" text="No" />
+            <Button fx:id="finish" layoutX="361.0" layoutY="248.0" mnemonicParsing="false" onAction="#addPatientWindowFinish" prefHeight="62.0" prefWidth="155.0" text="Clear Session" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

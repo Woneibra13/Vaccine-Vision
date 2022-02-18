@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SearchController">
+   <children>
+      <AnchorPane prefHeight="350.0" prefWidth="550.0">
+         <children>
+            <ImageView fitHeight="358.0" fitWidth="538.0" layoutX="-5.0" layoutY="-5.0" opacity="0.4">
+               <image>
+                  <Image url="@../resources/home-background.jpeg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="206.0" prefWidth="240.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="54.0" text="Name:">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="nameField" prefHeight="25.0" prefWidth="232.0">
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin></TextField>
+                  <Button fx:id="find" mnemonicParsing="false" onAction="#findButton" text="Find">
+                     <VBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="exit" mnemonicParsing="false" onAction="#exitButton" prefHeight="26.0" prefWidth="54.0" text="Exit">
+                     <VBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
